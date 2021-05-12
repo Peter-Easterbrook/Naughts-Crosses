@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+
+    <script src="script.js"></script>
+
+    <title>Noughts & Crosses</title>
+  </head>
+  <body>
+    <div class="game">
+      <form>
+        <div class="board">
+          <svg class="board__line" style="--x: 1; --y: 0">
+            <path
+              d="M 5 5 L 295 5"
+              fill="none"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-dasharray="300"
+              stroke-dashoffset="300"
+            ></path>
+          </svg>
+          <svg class="board__line" style="--x: 2; --y: 0">
+            <path
+              d="M 5 5 L 295 5"
+              fill="none"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-dasharray="300"
+              stroke-dashoffset="300"
+            ></path>
+          </svg>
+          <svg class="board__line" style="--x: 0; --y: 1">
+            <path
+              d="M 5 5 L 295 5"
+              fill="none"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-dasharray="300"
+              stroke-dashoffset="300"
+            ></path>
+          </svg>
+          <svg class="board__line" style="--x: 0; --y: 2">
+            <path
+              d="M 5 5 L 295 5"
+              fill="none"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-dasharray="300"
+              stroke-dashoffset="300"
+            ></path>
+          </svg>
+          <input type="checkbox" id="x--0" style="--col: 0; --row: 0" /><span
+            style="--col: 0; --row: 0"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--0" style="--col: 0; --row: 0" /><span
+            style="--col: 0; --row: 0"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--1" style="--col: 1; --row: 0" /><span
+            style="--col: 1; --row: 0"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--1" style="--col: 1; --row: 0" /><span
+            style="--col: 1; --row: 0"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--2" style="--col: 2; --row: 0" /><span
+            style="--col: 2; --row: 0"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--2" style="--col: 2; --row: 0" /><span
+            style="--col: 2; --row: 0"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--3" style="--col: 0; --row: 1" /><span
+            style="--col: 0; --row: 1"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--3" style="--col: 0; --row: 1" /><span
+            style="--col: 0; --row: 1"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--4" style="--col: 1; --row: 1" /><span
+            style="--col: 1; --row: 1"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--4" style="--col: 1; --row: 1" /><span
+            style="--col: 1; --row: 1"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--5" style="--col: 2; --row: 1" /><span
+            style="--col: 2; --row: 1"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--5" style="--col: 2; --row: 1" /><span
+            style="--col: 2; --row: 1"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--6" style="--col: 0; --row: 2" /><span
+            style="--col: 0; --row: 2"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--6" style="--col: 0; --row: 2" /><span
+            style="--col: 0; --row: 2"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--7" style="--col: 1; --row: 2" /><span
+            style="--col: 1; --row: 2"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--7" style="--col: 1; --row: 2" /><span
+            style="--col: 1; --row: 2"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <input type="checkbox" id="x--8" style="--col: 2; --row: 2" /><span
+            style="--col: 2; --row: 2"
+          >
+            <svg class="x">
+              <path
+                class="cross"
+                d="M 20 20 L 80 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path>
+              <path
+                class="cross"
+                d="M 80 20 L 20 80"
+                fill="none"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-dasharray="100"
+                stroke-dashoffset="100"
+              ></path></svg
+          ></span>
+          <input type="checkbox" id="o--8" style="--col: 2; --row: 2" /><span
+            style="--col: 2; --row: 2"
+          >
+            <svg class="o">
+              <circle
+                class="naught"
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke-width="10"
+                stroke-dasharray="200"
+                stroke-dashoffset="200"
+                stroke-linecap="round"
+              ></circle></svg
+          ></span>
+          <label for="x--0" style="--col: 0; --row: 0"></label>
+          <label for="o--0" style="--col: 0; --row: 0"></label>
+          <label for="x--1" style="--col: 1; --row: 0"></label>
+          <label for="o--1" style="--col: 1; --row: 0"></label>
+          <label for="x--2" style="--col: 2; --row: 0"></label>
+          <label for="o--2" style="--col: 2; --row: 0"></label>
+          <label for="x--3" style="--col: 0; --row: 1"></label>
+          <label for="o--3" style="--col: 0; --row: 1"></label>
+          <label for="x--4" style="--col: 1; --row: 1"></label>
+          <label for="o--4" style="--col: 1; --row: 1"></label>
+          <label for="x--5" style="--col: 2; --row: 1"></label>
+          <label for="o--5" style="--col: 2; --row: 1"></label>
+          <label for="x--6" style="--col: 0; --row: 2"></label>
+          <label for="o--6" style="--col: 0; --row: 2"></label>
+          <label for="x--7" style="--col: 1; --row: 2"></label>
+          <label for="o--7" style="--col: 1; --row: 2"></label>
+          <label for="x--8" style="--col: 2; --row: 2"></label>
+          <label for="o--8" style="--col: 2; --row: 2"></label>
+          <div class="board__result board__result--x result">
+            <dl class="result__content">
+              <dt class="result__title">Winner!</dt>
+              <dd class="result__details">
+                <svg class="x result__icon">
+                  <path
+                    class="cross"
+                    d="M 20 20 L 80 80"
+                    fill="none"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                    stroke-dasharray="100"
+                    stroke-dashoffset="100"
+                  ></path>
+                  <path
+                    class="cross"
+                    d="M 80 20 L 20 80"
+                    fill="none"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                    stroke-dasharray="100"
+                    stroke-dashoffset="100"
+                  ></path>
+                </svg>
+              </dd>
+              <button class="result__reset" type="reset">Play again</button>
+            </dl>
+            <div class="result__firework-icon" style="--y: 273; --r: 216">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 414; --r: 174">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 345; --r: 240">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 424; --r: 285">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 470; --r: 55">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 230; --r: 198">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 448; --r: 328">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 474; --r: 76">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 330; --r: 216">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 358; --r: 117">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 369; --r: 279">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 346; --r: 172">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 456; --r: 318">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 235; --r: 121">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 234; --r: 184">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 400; --r: 319">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 360; --r: 245">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 374; --r: 56">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 216; --r: 284">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 419; --r: 29">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 329; --r: 170">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 384; --r: 124">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 481; --r: 187">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 407; --r: 48">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 316; --r: 170">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 497; --r: 335">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 353; --r: 271">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 492; --r: 250">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 297; --r: 320">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 350; --r: 124">
+              🎉
+            </div>
+          </div>
+          <div class="board__result board__result--o result">
+            <dl class="result__content">
+              <dt class="result__title">Winner!</dt>
+              <dd class="result__details">
+                <svg class="o result__icon">
+                  <circle
+                    class="naught"
+                    cx="50"
+                    cy="50"
+                    r="30"
+                    fill="none"
+                    stroke-width="10"
+                    stroke-dasharray="200"
+                    stroke-dashoffset="200"
+                    stroke-linecap="round"
+                  ></circle>
+                </svg>
+              </dd>
+              <button class="result__reset" type="reset">Play again</button>
+            </dl>
+            <div class="result__firework-icon" style="--y: 390; --r: 151">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 361; --r: 42">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 388; --r: 273">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 264; --r: 305">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 283; --r: 58">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 395; --r: 57">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 319; --r: 197">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 292; --r: 333">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 457; --r: 155">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 499; --r: 1">🎉</div>
+            <div class="result__firework-icon" style="--y: 310; --r: 346">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 486; --r: 49">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 333; --r: 114">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 263; --r: 14">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 263; --r: 121">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 349; --r: 129">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 362; --r: 130">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 329; --r: 0">🎉</div>
+            <div class="result__firework-icon" style="--y: 451; --r: 175">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 496; --r: 305">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 476; --r: 157">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 395; --r: 278">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 258; --r: 335">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 373; --r: 229">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 233; --r: 0">🎉</div>
+            <div class="result__firework-icon" style="--y: 316; --r: 74">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 219; --r: 29">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 335; --r: 279">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 324; --r: 26">
+              🎉
+            </div>
+            <div class="result__firework-icon" style="--y: 300; --r: 43">
+              🎉
+            </div>
+          </div>
+          <div class="board__result board__result--draw">
+            <dl class="result__content">
+              <dt class="result__title">Draw!</dt>
+              <dd class="result__details">
+                <div class="result__emoji">😭</div>
+              </dd>
+              <button class="result__reset" type="reset">Play again</button>
+            </dl>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/93b32f94da.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
